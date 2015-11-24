@@ -13,6 +13,8 @@ var cobros_router = require('./lib/cobros/cobros_controller');
 var ofertas_router = require('./lib/ofertas/ofertas_controller');
 var pedidos_router = require('./lib/pedidos/pedidos_controller');
 var albaranes_router = require('./lib/albaranes/albaranes_controller');
+var indicadores_router = require('./lib/indicadores/indicadores_controller');
+var facturas_router = require('./lib/facturas/facturas_controller');
 // express
 var app = express();
 
@@ -59,6 +61,10 @@ app.use('/api/ofertas', ofertas_router);
 app.use('/api/pedidos', pedidos_router);
 //---------- Rutas relacionadas con albaranes
 app.use('/api/albaranes', albaranes_router);
+//---------- Rutas relacionadas con indicadores
+app.use('/api/indicadores', indicadores_router);
+//---------- Rutas relacionadas con facturas
+app.use('/api/facturas', facturas_router);
 
 // Registrar rutas base
 app.use('/api', router);
